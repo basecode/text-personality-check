@@ -22,7 +22,31 @@ export default {
     }
   }
 }
+const text = `Vice President Johnson, Mr. Speaker, Mr. Chief Justice, President Eisenhower,
+Vice President Nixon, President Truman, Reverend Clergy, fellow citizens:
+
+We observe today not a victory of party but a celebration of freedom --
+symbolizing an end as well as a beginning -- signifying renewal as well as
+change. For I have sworn before you and Almighty God the same solemn oath our
+forbears prescribed nearly a century and three-quarters ago.
+
+The world is very different now. For man holds in his mortal hands the power
+to abolish all forms of human poverty and all forms of human life. And yet
+the same revolutionary beliefs for which our forebears fought are still at
+issue around the globe -- the belief that the rights of man come not from the
+generosity of the state but from the hand of God.`;
+
+const url = 'https://gateway-fra.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13';
+fetch(url, {
+    method: "POST",
+    headers: {
+       "Content-Type": "text/plain;charset=utf-8",
+       "Accept": "application/json" 
+    },
+    body: text
+})
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
