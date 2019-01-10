@@ -1,7 +1,7 @@
 <template>
   <div id="editor">
     <textarea :value="input" @input="onUpdate"></textarea>
-    <div v-html="compiledMarkdown"></div>
+    <div>{{ input }}</div>
   </div>
 </template>
 
@@ -39,7 +39,8 @@ textarea, #editor div {
   height: 100%;
   vertical-align: top;
   box-sizing: border-box;
-  padding: 0 20px;
+  text-align: left;
+  padding: 15px 20px;
 }
 
 textarea {
