@@ -36,13 +36,18 @@ the same revolutionary beliefs for which our forebears fought are still at
 issue around the globe -- the belief that the rights of man come not from the
 generosity of the state but from the hand of God.`;
 
-const url = 'https://gateway-fra.watsonplatform.net/personality-insights/api/v3/profile?version=2017-10-13';
+const url = 'http://localhost:3000/short';
+
+const headers = new Headers();
+headers.set('Content-Type', 'text/plain;charset=utf-8');
+headers.set('Accept', 'application/json');
+headers.set('Access-Control-Allow-Credentials', true);
+
 fetch(url, {
     method: "POST",
-    headers: {
-       "Content-Type": "text/plain;charset=utf-8",
-       "Accept": "application/json" 
-    },
+    credentials: 'omit',
+    mode: 'no-cors',
+    headers: headers,
     body: text
 })
 </script>
